@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protótipo</title>
+    <style>
+                #botao {
+            position: absolute; /* Permite posicionar o botão de forma absoluta */
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        body {
+            background-color: #ccc;
+            font-family: sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .texto {
+            font-size: 100px;
+            padding-bottom: 5px;
+            margin-bottom: 200px;
+        }
+        .botao {
+            background-color: #ff00f2;
+            color: rgb(201, 30, 30);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 100px;
+            text-decoration: none;
+            font
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="texto">Então me libera o precioso?👌💩</div>
+        <button id="botao">Não</button>
+        <button class="botao"><a href="festa.html" style="text-decoration: none;">Simmmmmmmm</a></button>
+        <script>
+            const botao = document.getElementById("botao");
+    
+            botao.addEventListener("mouseover", () => {
+                // Gera posições aleatórias dentro da janela
+                const novaPosX = Math.random() * (window.innerWidth - botao.offsetWidth);
+                const novaPosY = Math.random() * (window.innerHeight - botao.offsetHeight);
+    
+                // Define as novas posições do botão
+                botao.style.left = novaPosX + "px";
+                botao.style.top = novaPosY + "px";
+            });
+        </script>
+    </div>
+</body>
+</html>
